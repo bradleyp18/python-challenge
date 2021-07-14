@@ -59,9 +59,9 @@ print(f"Total: ${sum(totalProfit)}")
 # Round two decimal places to find the average 
 print(f"Average Change: {round(sum(monthlyProfitChange)/len(monthlyProfitChange),2)}")
 
-# Finding the 
+# Display the month and its associated max / min value 
 print(f"Greatest Increase in Profits: {totalMonths[maxUpMonth]} (${(str(maxIncrease))})")
-print(f"Greatest Increase in Profits: {totalMonths[maxDownMonth]} (${(str(maxDecrease))})")
+print(f"Greatest Decreasw in Profits: {totalMonths[maxDownMonth]} (${(str(maxDecrease))})")
 
 
 
