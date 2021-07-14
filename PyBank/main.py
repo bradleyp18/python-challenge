@@ -8,6 +8,7 @@ import os
 import csv
 
 # Store the file path associated with the file -- include 'r' pre-filepath 
+# Update file path on seperate machines 
 csvFile = R"C:\Users\bradl\Desktop\Git\nwBootCamp\python-challenge\PyBank\Resources\budget_data.csv"
 
 # Create empty lists to iterate through
@@ -48,7 +49,7 @@ maxDownMonth = monthlyProfitChange.index(min(monthlyProfitChange)) + 1
 
 # Find the total number of months in the dataset 
 print("Financial Analysis")
-print("----------------------------")
+print(25 * "-")
 
 # Count of total months in dataset 
 print(f"Total Months: {len(totalMonths)}")
@@ -64,6 +65,23 @@ print(f"Greatest Increase in Profits: {totalMonths[maxUpMonth]} (${(str(maxIncre
 print(f"Greatest Decreasw in Profits: {totalMonths[maxDownMonth]} (${(str(maxDecrease))})")
 
 
+# Create output file 
+outputFile = os.path.join("nwBootCamp", "python-challenge", "PyBank", "analysis", "results.txt")
 
+with open(outputFile, "w") as file:
 
-
+    # Write out methods that will replicate terminal output
+    # \n creates a new line 
+    file.write("Financial Analysis")
+    file.write("\n")
+    file.write(25 * "-")
+    file.write("\n")
+    file.write(f"Total Months: {len(totalMonths)}")
+    file.write("\n")
+    file.write(f"Total: ${sum(totalProfit)}")
+    file.write("\n")
+    file.write(f"Average Change: {round(sum(monthlyProfitChange)/len(monthlyProfitChange),2)}")
+    file.write("\n")
+    file.write(f"Greatest Increase in Profits: {totalMonths[maxUpMonth]} (${(str(maxIncrease))})")
+    file.write("\n")
+    file.write(f"Greatest Decreasw in Profits: {totalMonths[maxDownMonth]} (${(str(maxDecrease))})")
