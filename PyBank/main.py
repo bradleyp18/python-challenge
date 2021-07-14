@@ -47,7 +47,7 @@ maxDecrease = min(monthlyProfitChange)
 maxUpMonth = monthlyProfitChange.index(max(monthlyProfitChange)) + 1
 maxDownMonth = monthlyProfitChange.index(min(monthlyProfitChange)) + 1
 
-# Find the total number of months in the dataset 
+# Return our output
 print("Financial Analysis")
 print(25 * "-")
 
