@@ -62,7 +62,7 @@ print(f"Average Change: {round(sum(monthlyProfitChange)/len(monthlyProfitChange)
 
 # Display the month and its associated max / min value 
 print(f"Greatest Increase in Profits: {totalMonths[maxUpMonth]} (${(str(maxIncrease))})")
-print(f"Greatest Decreasw in Profits: {totalMonths[maxDownMonth]} (${(str(maxDecrease))})")
+print(f"Greatest Decrease in Profits: {totalMonths[maxDownMonth]} (${(str(maxDecrease))})")
 
 
 # Create output file 
