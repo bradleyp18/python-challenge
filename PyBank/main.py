@@ -41,12 +41,27 @@ with open(csvFile) as budgetFile:
 maxIncrease = max(monthlyProfitChange)    
 maxDecrease = min(monthlyProfitChange)
 
+# Find the respective month for the min and max value 
+# Be sure to add one becasue we are looking for the ending month, not the beginning 
+maxUpMonth = monthlyProfitChange.index(max(monthlyProfitChange)) + 1
+maxDownMonth = monthlyProfitChange.index(min(monthlyProfitChange)) + 1
+
 # Find the total number of months in the dataset 
 print("Financial Analysis")
 print("----------------------------")
+
+# Count of total months in dataset 
 print(f"Total Months: {len(totalMonths)}")
+
+# Find the sum of the total Profit 
 print(f"Total: ${sum(totalProfit)}")
+
+# Round two decimal places to find the average 
 print(f"Average Change: {round(sum(monthlyProfitChange)/len(monthlyProfitChange),2)}")
+
+# Finding the 
+print(f"Greatest Increase in Profits: {totalMonths[maxUpMonth]} (${(str(maxIncrease))})")
+print(f"Greatest Increase in Profits: {totalMonths[maxDownMonth]} (${(str(maxDecrease))})")
 
 
 
