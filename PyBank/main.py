@@ -83,4 +83,4 @@ with open(outputFile, "w") as file:
     file.write("\n")
     file.write(f"Greatest Increase in Profits: {totalMonths[maxUpMonth]} (${(str(maxIncrease))})")
     file.write("\n")
-    file.write(f"Greatest Decreasw in Profits: {totalMonths[maxDownMonth]} (${(str(maxDecrease))})")
+    file.write(f"Greatest Decrease in Profits: {totalMonths[maxDownMonth]} (${(str(maxDecrease))})")
