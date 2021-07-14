@@ -26,6 +26,9 @@ with open(csvFile) as budgetFile:
     # Read the rows (excluding the header)
     for row in csvReader:
 
+        # Display csv
+        print (row)
+
         # Append total months and total profit 
         totalMonths.append(row[0])
         totalProfit.append(int(row[1]))
@@ -34,8 +37,18 @@ with open(csvFile) as budgetFile:
     for i in range (len(totalProfit)-1):
         monthlyProfitChange.append(totalProfit[i+1] - totalProfit[i])
 
-# 
-        
+# Find max and min of the monthly profit change 
+maxIncrease = max(monthlyProfitChange)    
+maxDecrease = min(monthlyProfitChange)
 
 # Find the total number of months in the dataset 
+print("Financial Analysis")
+print("----------------------------")
+print(f"Total Months: {len(totalMonths)}")
+print(f"Total: ${sum(totalProfit)}")
+print(f"Average Change: {round(sum(monthlyProfitChange)/len(monthlyProfitChange),2)}")
+
+
+
+
 
