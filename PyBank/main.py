@@ -9,7 +9,7 @@ import csv
 
 # Store the file path associated with the file -- include 'r' pre-filepath 
 # Update file path on seperate machines 
-csvFile = R"C:\Users\bradl\Desktop\Git\nwBootCamp\python-challenge\PyBank\Resources\budget_data.csv"
+csvFile = os.path.join("Resources","budget_data.csv")
 
 # Create empty lists to iterate through
 totalMonths = []
@@ -66,7 +66,7 @@ print(f"Greatest Decrease in Profits: {totalMonths[maxDownMonth]} (${(str(maxDec
 
 
 # Create output file 
-outputFile = os.path.join("nwBootCamp","python-challenge", "PyBank", "analysis", "results.txt")
+outputFile = os.path.join( "analysis", "results.txt")
 with open(outputFile, "w") as file:
 
     # Write out methods that will replicate terminal output
