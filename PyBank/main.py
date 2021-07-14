@@ -66,12 +66,11 @@ print(f"Greatest Decreasw in Profits: {totalMonths[maxDownMonth]} (${(str(maxDec
 
 
 # Create output file 
-outputFile = os.path.join("nwBootCamp", "python-challenge", "PyBank", "analysis", "results.txt")
-
+outputFile = os.path.join("nwBootCamp","python-challenge", "PyBank", "analysis", "results.txt")
 with open(outputFile, "w") as file:
 
     # Write out methods that will replicate terminal output
-    # \n creates a new line 
+    # \n creates a new line in .txt file
     file.write("Financial Analysis")
     file.write("\n")
     file.write(25 * "-")
