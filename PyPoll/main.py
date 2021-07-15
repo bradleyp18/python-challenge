@@ -45,9 +45,35 @@ with open(pollData) as pollFile:
 
     print ('Election Results')
     print ('----------------------------')
-    print (F"Total Votes: {rowCount}")
+    print (f"Total Votes: {rowCount}")
     print ('----------------------------')
     for k in range (0, candidateCount):
         print(f"{candidateList[k]}: {percentage[k]:.3%} ({votes[k]})")
     print ('----------------------------')
     print (f"Winner: {candidateList[winningCandidate]}")
+
+
+
+# Create output file 
+outputFile = os.path.join("analysis", "poll_results.txt")
+with open(outputFile, "w") as file:
+
+    # Write out methods that will replicate terminal output
+    # \n creates a new line in .txt file
+    file.write('Election Results')
+    file.write("\n")
+    file.write('----------------------------')
+    file.write("\n")
+    file.write(f"Total Votes: {rowCount}")
+    file.write("\n")
+    file.write('----------------------------')
+    file.write("\n")
+    for k in range (0, candidateCount):
+        file.write (f"{candidateList[k]}: {percentage[k]:.3%} ({votes[k]})")
+        file.write ("\n")
+    file.write('----------------------------')
+    file.write("\n")
+    file.write(f"Winner: {candidateList[winningCandidate]}")
+    file.write("\n")
+    file.write('----------------------------')
+
