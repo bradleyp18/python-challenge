@@ -58,7 +58,7 @@ print(f"Total Months: {len(totalMonths)}")
 print(f"Total: ${sum(totalProfit)}")
 
 # Round two decimal places to find the average 
-print(f"Average Change: {round(sum(monthlyProfitChange)/len(monthlyProfitChange),2)}")
+print(f"Average Change: ${round(sum(monthlyProfitChange)/len(monthlyProfitChange),2)}")
 
 # Display the month and its associated max / min value 
 print(f"Greatest Increase in Profits: {totalMonths[maxUpMonth]} (${(str(maxIncrease))})")
@@ -79,7 +79,7 @@ with open(outputFile, "w") as file:
     file.write("\n")
     file.write(f"Total: ${sum(totalProfit)}")
     file.write("\n")
-    file.write(f"Average Change: {round(sum(monthlyProfitChange)/len(monthlyProfitChange),2)}")
+    file.write(f"Average Change: ${round(sum(monthlyProfitChange)/len(monthlyProfitChange),2)}")
     file.write("\n")
     file.write(f"Greatest Increase in Profits: {totalMonths[maxUpMonth]} (${(str(maxIncrease))})")
     file.write("\n")
